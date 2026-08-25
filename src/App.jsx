@@ -10,13 +10,13 @@ import ProtectedRoute from "./pages/protectRoute";
 import StaffLogin from "./pages/staffLogin";
 import StaffDashboard from "./pages/staffDashboard";
 import StaffStudents from "./pages/staffStudent";
-import StaffLayout from "./pages/staffLayout";
+// import StaffLayout from "./pages/staffLayout";
 import StaffPaymentPage from "./pages/staffPaymentPage";
 import StaffDaycare from "./pages/staffDaycare";
 import ProtectedRouteStaff from "./pages/protectedRouteStaff";
 import AdminLayout from "./pages/AdminLayout";
-import ForgotPassword from "./pages/forgotPassword";
-import ResetPassword from "./pages/resetPassword";
+// import ForgotPassword from "./pages/forgotPassword";
+// import ResetPassword from "./pages/resetPassword";
 
 import "./App.css";
 
