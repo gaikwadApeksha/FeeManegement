@@ -5,6 +5,8 @@ import "./staffPaymentPage.css";
 import html2pdf from "html2pdf.js";
 
 function FeePayment() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const logoUrl = `${window.location.origin}/logo.webp.png`;
   const signUrl = `${window.location.origin}/sign.png`;
 
@@ -30,8 +32,8 @@ function FeePayment() {
   const loadStudents = async () => {
     try {
       const [studentResponse, daycareResponse] = await Promise.all([
-        axios.get("http://localhost:8080/api/students/all"),
-        axios.get("http://localhost:8080/api/daycare/all"),
+        axios.get(`${API_URL}/api/students/all`),
+        axios.get(`${API_URL}/api/daycare/all`),
       ]);
 
       console.log("STUDENTS FROM BACKEND:", studentResponse.data);
@@ -60,7 +62,7 @@ function FeePayment() {
 
   const loadPayments = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/payments");
+      const response = await axios.get(`${API_URL}/payments`);
 
       console.log("Payments from backend:", response.data);
       setPayments(response.data || []);
@@ -284,7 +286,7 @@ function FeePayment() {
     try {
       console.log("Sending Data:", paymentData);
 
-      await axios.post("http://localhost:8080/payments", paymentData);
+      await axios.post(`${API_URL}/payments`, paymentData);
 
       const response = await axios.get("http://localhost:8080/payments");
       setPayments(response.data || []);

@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import "./report.css";
 
 function report() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [payments, setPayments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   // Load payments from backend
   const loadPayments = async () => {
     try {
-      const response = await fetch("http://localhost:8080/payments");
+      const response = await fetch(`${API_URL}/payments`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch payments");

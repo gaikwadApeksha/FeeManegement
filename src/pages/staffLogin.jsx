@@ -3,6 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 function staffLogin() {
+
+  const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
@@ -12,40 +14,9 @@ function staffLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
-    // Staff credentials - temporary for testing
-    // const staffUsers = [
-    //   {
-    //     username: "millenniumKidssAshwini",
-    //     password: "mkAshwini@2003",
-    //     id: 3,
-    //     name: "Ashwini",
-    //     branches: ["Khamla"],
-    //   },
-    //   {
-    //     username: "millenniumKidssPrachi",
-    //     password: "mkPrachi@2004",
-    //     id: 4,
-    //     name: "Prachi",
-    //     branches: ["Narendra Nagar", "Manewada"],
-    //   },
-    //   {
-    //     username: "millenniumKidssPornima",
-    //     password: "mkPornima@2005",
-    //     id: 5,
-    //     name: "Pornima",
-    //     branches: ["Nandanvan", "Medical"],
-    //   },
-    //   {
-    //     username: "millenniumKidssMihan",
-    //     password: "mkMihan@2006",
-    //     id: 6,
-    //     name: "Mihan",
-    //     branches: ["Mihan"],
-    //   },
-    // ];
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/users/login",
+        `${API_URL}/api/users/login`,
         {
           username,
           password,
@@ -63,17 +34,7 @@ function staffLogin() {
 
       setError("Invalid staff username or password");
     }
-    // const user = staffUsers.find(
-    //   (u) => u.username === username && u.password === password,
-    // );
-
-    // if (user) {
-    //   localStorage.setItem("staffUser", JSON.stringify(user));
-
-    //   navigate("/staffdashboard", { replace: true });
-    // } else {
-    //   setError("Invalid staff username or password");
-    // }
+  
   };
 
   return (

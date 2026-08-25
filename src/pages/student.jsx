@@ -4,6 +4,7 @@ import "./student.css";
 import axios from "axios";
 
 export default function Student() {
+  const API_URL = import.meta.env.VITE_API_URL;
   // ************search bar***************
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -59,7 +60,7 @@ export default function Student() {
       // alert("Student Added Successfully");
       if (editingId) {
         await axios.put(
-          `http://localhost:8080/api/students/update/${editingId}`,
+          `${API_URL}/api/students/update/${editingId}`,
           formData,
         );
 
@@ -122,9 +123,7 @@ export default function Student() {
     }
 
     try {
-      await axios.delete(
-        `http://localhost:8080/api/students/delete/${studentId}`,
-      );
+      await axios.delete(`${API_URL}/api/students/delete/${studentId}`);
 
       alert("Student deleted successfully");
 

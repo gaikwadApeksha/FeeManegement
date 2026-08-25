@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "./student.css";
 
 export default function dayCare() {
+  const API_URL = import.meta.env.VITE_API_URL;
   // const [selectedBranch, setSelectedBranch] = useState("");
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(true);
@@ -37,7 +38,7 @@ export default function dayCare() {
     try {
       console.log("Loading daycare students...");
 
-      const response = await fetch("http://localhost:8080/api/daycare/all");
+      const response = await fetch(`${API_URL}/api/daycare/all`);
 
       if (!response.ok) {
         throw new Error(`Server returned ${response.status}`);
@@ -61,7 +62,7 @@ export default function dayCare() {
   // =====================================================
   const loadPayments = async () => {
     try {
-      const response = await fetch("http://localhost:8080/payments");
+      const response = await fetch(`${API_URL}/api/payments`);
 
       if (!response.ok) {
         throw new Error(`Server returned ${response.status}`);
@@ -144,7 +145,7 @@ export default function dayCare() {
       // console.log("Selected branch:", selectedBranch);
       console.log("Form data:", formData);
 
-      const response = await fetch("http://localhost:8080/api/daycare/save", {
+      const response = await fetch(`${API_URL}/api/daycare/save`, {
         method: "POST",
 
         headers: {

@@ -7,37 +7,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 function staffPaymentPage() {
   const logoUrl = `${window.location.origin}/logo.webp.png`;
   const signUrl = `${window.location.origin}/sign.png`;
-
+  const API_URL = import.meta.env.VITE_API_URL;
   // const [payments, setPayments] = useState([]);
   const [students, setStudents] = useState([]);
 
   // ============================================================
   // LOAD STUDENTS
   // ============================================================
-
-  // const loadStudents = async () => {
-  //   try {
-  //     const [studentResponse, daycareResponse] = await Promise.all([
-  //       axios.get("http://localhost:8080/api/students/all"),
-  //       axios.get("http://localhost:8080/api/daycare/all"),
-  //     ]);
-
-  //     const preschoolStudents = studentResponse.data.map((student) => ({
-  //       ...student,
-  //       studentType: "Preschool",
-  //     }));
-
-  //     const daycareStudents = daycareResponse.data.map((student) => ({
-  //       ...student,
-  //       studentType: "Daycare",
-  //       className: "Daycare",
-  //     }));
-
-  //     setStudents([...preschoolStudents, ...daycareStudents]);
-  //   } catch (error) {
-  //     console.error("Error loading students:", error);
-  //   }
-  // };
 
   const loadStudents = async () => {
     try {
@@ -48,13 +24,13 @@ function staffPaymentPage() {
 
       const studentRequests = branchNames.map((branch) =>
         axios.get(
-          `http://localhost:8080/api/students/branch/${encodeURIComponent(branch)}`,
+          `${API_URL}/api/students/branch/${encodeURIComponent(branch)}`,
         ),
       );
 
       const daycareRequests = branchNames.map((branch) =>
         axios.get(
-          `http://localhost:8080/api/daycare/branch/${encodeURIComponent(branch)}`,
+          `${API_URL}/api/daycare/branch/${encodeURIComponent(branch)}`,
         ),
       );
 
@@ -258,11 +234,8 @@ function staffPaymentPage() {
     try {
       console.log("Sending Data:", paymentData);
 
-      const response = await axios.post(
-        "http://localhost:8080/payments",
-        paymentData,
-      );
-      // await axios.post("http://localhost:8080/payments", paymentData);
+      const response = await axios.post(`${API_URL}/payments`, paymentData);
+      // await axios.post(`${API_URL}/payments`, paymentData);
       console.log("SAVED PAYMENT:", response.data);
       // setPayments("Payment Saved: ", response.data);
       alert("Payments saved successfully");

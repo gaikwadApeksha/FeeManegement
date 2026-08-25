@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./staffStudent.css";
 
 function StaffStudents() {
+  const API_URL = import.meta.env.VITE_API_URL;
   // =====================================================
   // STAFF LOGIN INFORMATION
   // =====================================================
@@ -59,9 +60,7 @@ function StaffStudents() {
       console.log("Loading students for branch:", selectedBranch);
 
       const response = await fetch(
-        `http://localhost:8080/api/students/branch/${encodeURIComponent(
-          selectedBranch,
-        )}`,
+        `${API_URL}/api/students/branch/${encodeURIComponent(selectedBranch)}`,
       );
 
       const responseText = await response.text();
@@ -143,7 +142,7 @@ function StaffStudents() {
       console.log("Selected branch:", selectedBranch);
       console.log("Form data:", formData);
 
-      const response = await fetch("http://localhost:8080/api/students/save", {
+      const response = await fetch(`${API_URL}/api/students/save`, {
         method: "POST",
 
         headers: {

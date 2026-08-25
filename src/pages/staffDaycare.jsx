@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./staffDaycare.css";
 
 function staffStudents() {
+  const API_URL = import.meta.env.VITE_API_URL;
   // =====================================================
   // STAFF LOGIN INFORMATION
   // =====================================================
@@ -61,9 +62,7 @@ function staffStudents() {
       console.log("Loading students for branch:", selectedBranch);
 
       const response = await fetch(
-        `http://localhost:8080/api/daycare/branch/${encodeURIComponent(
-          selectedBranch,
-        )}`,
+        `${API_URL}/api/daycare/branch/${encodeURIComponent(selectedBranch)}`,
       );
 
       const responseText = await response.text();
@@ -182,7 +181,7 @@ function staffStudents() {
       console.log("Selected branch:", selectedBranch);
       console.log("Form data:", formData);
 
-      const response = await fetch("http://localhost:8080/api/daycare/save", {
+      const response = await fetch(`${API_URL}/api/daycare/save`, {
         method: "POST",
 
         headers: {
