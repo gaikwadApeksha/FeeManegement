@@ -14,7 +14,7 @@ import StaffStudents from "./pages/staffStudent";
 import StaffPaymentPage from "./pages/staffPaymentPage";
 import StaffDaycare from "./pages/staffDaycare";
 import ProtectedRouteStaff from "./pages/protectedRouteStaff";
-import AdminLayout from "./pages/AdminLayout";
+import AdminLayout from "./pages/adminLayout";
 // import ForgotPassword from "./pages/forgotPassword";
 // import ResetPassword from "./pages/resetPassword";
 
