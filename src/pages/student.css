@@ -1,0 +1,305 @@
+/* =====================================================
+   MAIN STUDENT PAGE
+===================================================== */
+
+.student-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #eef7ff 0%, #fffaf0 100%);
+  font-family: "Segoe UI", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.student-page > h1 {
+  color: #1e3a8a !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  margin-bottom: 25px !important;
+  padding-left: 15px;
+  border-left: 6px solid #f59e0b;
+}
+
+
+/* =====================================================
+   ADD STUDENT CARD
+===================================================== */
+
+.student-form-card {
+  width: 100%;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 25px !important;
+  margin-bottom: 28px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+/* =====================================================
+   FORM HEADER
+===================================================== */
+
+.student-form-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid #f59e0b;
+}
+
+.student-form-title h5 {
+  margin: 0 !important;
+  color: #1e3a8a !important;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   FORM FIELD
+===================================================== */
+
+.student-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.student-form-card .form-control,
+.student-form-card .form-select {
+  width: 100%;
+  height: 45px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 9px 13px !important;
+  font-size: 14px !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+}
+
+.student-form-card .form-control:focus,
+.student-form-card .form-select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+  outline: none !important;
+}
+
+.student-form-card .form-control::placeholder {
+  color: #9ca3af !important;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.student-submit-btn {
+  height: 45px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.student-submit-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   STUDENT LIST CARD
+===================================================== */
+
+.student-list-card {
+  width: 100%;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 22px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+/* =====================================================
+   STUDENT LIST HEADER
+===================================================== */
+
+.student-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 13px;
+  border-bottom: 2px solid #f59e0b;
+}
+
+.student-list-header h5 {
+  margin: 0 !important;
+  color: #1e3a8a !important;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.student-table {
+  width: 100% !important;
+  margin: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+/* TABLE HEADER */
+
+.student-table thead th {
+  background: #1e293b !important;
+  color: #ffffff !important;
+  padding: 13px 10px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap;
+  border: none !important;
+}
+
+
+/* TABLE BODY */
+
+.student-table tbody td {
+  padding: 12px 10px !important;
+  font-size: 13px !important;
+  color: #374151 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+
+/* Hover */
+
+.student-table tbody tr:hover {
+  background: #f1f7ff !important;
+}
+
+
+/* Alternate rows */
+
+.student-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+
+/* =====================================================
+   STUDENT NAME
+===================================================== */
+
+.student-table .student-name {
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+}
+
+
+/* =====================================================
+   ADMISSION NUMBER
+===================================================== */
+
+.admission-number {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   FEES
+===================================================== */
+
+.fee-value {
+  font-weight: 600;
+  color: #374151 !important;
+}
+
+.remaining-fee {
+  font-weight: 700;
+  color: #dc2626 !important;
+}
+
+
+/* =====================================================
+   EMPTY MESSAGE
+===================================================== */
+
+.no-students {
+  padding: 35px !important;
+  color: #6b7280 !important;
+  text-align: center !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .student-page {
+    padding: 15px;
+  }
+
+  .student-page > h1 {
+    font-size: 24px !important;
+  }
+
+  .student-form-card,
+  .student-list-card {
+    padding: 15px !important;
+  }
+
+  .student-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .student-table {
+    min-width: 1100px;
+  }
+
+}

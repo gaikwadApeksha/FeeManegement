@@ -1,0 +1,356 @@
+/* =========================================
+   STAFF PAYMENT PAGE
+========================================= */
+
+.staff-payment-page {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 25px 30px 50px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.staff-payment-page form {
+  width: 100%;
+}
+
+/* =========================================
+   SECTION CARDS
+========================================= */
+
+.staff-payment-page .card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  padding: 28px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Section heading */
+
+.staff-payment-page .card h4 {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f28c28;
+  position: relative;
+}
+
+/* Small orange line under heading */
+
+.staff-payment-page .card h4::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #f28c28;
+  border-radius: 10px;
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+.staff-payment-page label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+/* =========================================
+   INPUTS & SELECTS
+========================================= */
+
+.staff-payment-page .form-control,
+.staff-payment-page .form-select {
+  width: 100%;
+  min-height: 45px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #1f2937;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+/* Focus */
+
+.staff-payment-page .form-control:focus,
+.staff-payment-page .form-select:focus {
+  border-color: #f28c28;
+  box-shadow: 0 0 0 3px rgba(242, 140, 40, 0.15);
+  outline: none;
+}
+
+/* Readonly Receipt */
+
+.staff-payment-page input[readonly] {
+  background: #f3f4f6;
+  color: #6b7280;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   FORM ROW SPACING
+========================================= */
+
+.staff-payment-page .row {
+  row-gap: 8px;
+}
+
+.staff-payment-page .mb-3 {
+  margin-bottom: 18px !important;
+}
+
+/* =========================================
+   FEE TYPE SECTION
+========================================= */
+
+.staff-payment-page h5 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+/* Checkbox container */
+
+.staff-payment-page .form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+/* Checkbox */
+
+.staff-payment-page .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #f28c28;
+}
+
+/* Checkbox label */
+
+.staff-payment-page .form-check-label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+/* =========================================
+   PAYMENT INFORMATION
+========================================= */
+
+.staff-payment-page .mt-3 {
+  margin-top: 18px !important;
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.staff-payment-page .text-center {
+  text-align: center;
+}
+
+.staff-payment-page button[type="submit"] {
+  min-width: 180px;
+  padding: 11px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #198754;
+  background: #ffffff;
+  border: 2px solid #198754;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.staff-payment-page button[type="submit"]:hover {
+  background: #198754;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(25, 135, 84, 0.25);
+}
+
+/* =========================================
+   TRANSACTION DETAILS
+========================================= */
+
+.staff-payment-page > .card:last-child {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+/* Transaction header */
+
+.staff-payment-page .card-header {
+  background: linear-gradient(135deg, #1f2937, #374151) !important;
+  border: none;
+  padding: 17px 22px !important;
+}
+
+.staff-payment-page .card-header h5 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* =========================================
+   TRANSACTION TABLE
+========================================= */
+
+.staff-payment-page .table {
+  margin-bottom: 0;
+  width: 100%;
+  background: #ffffff;
+}
+
+.staff-payment-page .table thead th {
+  background: #f8fafc;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 12px;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.staff-payment-page .table tbody td {
+  padding: 13px 12px;
+  font-size: 13px;
+  color: #4b5563;
+  border-bottom: 1px solid #edf0f2;
+  vertical-align: middle;
+}
+
+/* Hover */
+
+.staff-payment-page .table tbody tr:hover {
+  background: #fffaf5;
+}
+
+/* Amount */
+
+.staff-payment-page .table td.text-success {
+  color: #198754 !important;
+  font-weight: 700;
+}
+
+/* Receipt button */
+
+.staff-payment-page .table .btn-success {
+  background: #198754;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 15px !important;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.staff-payment-page .table .btn-success:hover {
+  background: #157347;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(25, 135, 84, 0.25);
+}
+
+/* =========================================
+   EMPTY TRANSACTION MESSAGE
+========================================= */
+
+.staff-payment-page .text-muted {
+  color: #9ca3af !important;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+  .staff-payment-page {
+    padding: 20px;
+  }
+
+  .staff-payment-page .card {
+    padding: 22px !important;
+  }
+
+  .staff-payment-page .card h4 {
+    font-size: 21px;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .staff-payment-page {
+    padding: 15px;
+  }
+
+  .staff-payment-page .card {
+    padding: 18px !important;
+    border-radius: 10px !important;
+  }
+
+  .staff-payment-page .card h4 {
+    font-size: 19px;
+  }
+
+  .staff-payment-page .table {
+    min-width: 850px;
+  }
+
+  .staff-payment-page .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .staff-payment-page {
+    padding: 10px;
+  }
+
+  .staff-payment-page .card {
+    padding: 15px !important;
+  }
+
+  .staff-payment-page .card h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .staff-payment-page .form-control,
+  .staff-payment-page .form-select {
+    min-height: 42px;
+    font-size: 13px;
+  }
+
+  .staff-payment-page button[type="submit"] {
+    width: 100%;
+  }
+}

@@ -1,0 +1,283 @@
+/* ================================
+   PAYMENT REPORT PAGE
+================================ */
+
+.payment-report {
+  font-size: 13px;
+}
+
+/* Page heading */
+.payment-report h2 {
+  font-size: 24px;
+}
+
+.payment-report p {
+  font-size: 14px;
+}
+
+/* ================================
+   SEARCH BOX
+================================ */
+
+.payment-report .report-search {
+  max-width: 100%;
+  margin: 0 auto 20px;
+}
+
+.payment-report .report-search input {
+  height: 38px;
+  font-size: 14px;
+}
+
+/* ================================
+   TABLE CARD
+================================ */
+
+.payment-report .report-table-card {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Header */
+.payment-report .report-table-header {
+  background: #202b3f;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.payment-report .report-table-header h5 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ================================
+   TABLE
+================================ */
+
+.payment-report .table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Important:
+   Keeps table compact but allows horizontal scrolling */
+.payment-report table {
+  width: 100%;
+  min-width: 1100px;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+/* Table heading */
+.payment-report table thead th {
+  background: #202b3f;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 8px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Table body */
+.payment-report table tbody td {
+  font-size: 12px;
+  padding: 9px 8px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Student name */
+.payment-report table tbody td.student-name {
+  font-weight: 600;
+  text-align: left;
+  white-space: normal;
+}
+
+/* Fee type can wrap */
+.payment-report table tbody td.fee-type {
+  white-space: normal;
+  min-width: 180px;
+  max-width: 220px;
+  line-height: 1.4;
+}
+
+/* Amount */
+.payment-report .amount {
+  color: #008f5a;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Alternate row */
+.payment-report table tbody tr:nth-child(even) {
+  background: #f7f8fa;
+}
+
+/* Hover */
+.payment-report table tbody tr:hover {
+  background: #eef3f8;
+}
+
+/* ================================
+   SUMMARY CARD
+================================ */
+
+.payment-report .summary-card {
+  border-radius: 12px;
+}
+
+.payment-report .summary-card h5 {
+  font-size: 15px;
+}
+
+.payment-report .summary-card h3 {
+  font-size: 22px;
+}
+
+.payment-report .summary-card h6 {
+  font-size: 13px;
+}
+
+.payment-report .summary-card h4 {
+  font-size: 20px;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .payment-report {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .payment-report h2 {
+    font-size: 20px;
+  }
+
+  .payment-report table {
+    min-width: 1100px;
+    font-size: 11px;
+  }
+
+  .payment-report table thead th {
+    font-size: 11px;
+    padding: 7px 6px;
+  }
+
+  .payment-report table tbody td {
+    font-size: 11px;
+    padding: 7px 6px;
+  }
+}
+/* =========================================
+   REPORT SEARCH INPUT - FINAL OVERRIDE
+========================================= */
+
+.payment-report .report-search {
+  width: 100%;
+  margin: 0 0 25px 0 !important;
+}
+
+.payment-report .report-search > div {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.payment-report .report-search .input-group {
+  width: 100%;
+  height: 45px !important;
+  display: flex;
+  flex-wrap: nowrap !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Search icon */
+.payment-report .report-search .input-group-text {
+  width: 52px;
+  min-width: 52px;
+  height: 45px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 !important;
+
+  font-size: 19px;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* INPUT FIELD */
+.payment-report .report-search .form-control {
+  flex: 1 1 auto !important;
+
+  width: auto !important;
+  min-width: 0 !important;
+  height: 45px !important;
+
+  padding: 8px 14px !important;
+
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+
+  color: #333 !important;
+  background-color: #fff !important;
+
+  border: 1px solid #1268e8 !important;
+  border-left: none !important;
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Placeholder */
+.payment-report .report-search .form-control::placeholder {
+  color: #777 !important;
+  opacity: 1 !important;
+}
+
+/* Focus */
+.payment-report .report-search .form-control:focus {
+  border-color: #1268e8 !important;
+  box-shadow: none !important;
+}
+
+/* Clear button */
+.payment-report .report-search button {
+  height: 45px !important;
+  min-width: 45px;
+
+  padding: 0 12px !important;
+
+  background: #fff;
+  border: 1px solid #1268e8 !important;
+
+  color: #555;
+
+  font-size: 15px;
+}
+
+.payment-report .report-search button:hover {
+  background: #f1f1f1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .payment-report .report-search > div {
+    max-width: 95%;
+  }
+
+  .payment-report .report-search .form-control {
+    font-size: 13px !important;
+  }
+}

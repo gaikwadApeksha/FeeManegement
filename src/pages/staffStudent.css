@@ -1,0 +1,592 @@
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.staff-student-page {
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.main-content {
+  width: 100%;
+  padding: 22px 0 10px;
+}
+
+.student-header {
+  width: 86%;
+  max-width: 1200px;
+  min-height: 115px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 15px 28px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+
+/* LOGO */
+
+.student-logo-box {
+  width: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-shrink: 0;
+}
+
+.school-logo {
+  width: 145px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* CENTER INFORMATION */
+
+.student-header-info {
+  flex: 1;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-name {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+.school-subtitle {
+  margin: 6px 0 0;
+
+  font-size: 15px;
+
+  color: #444;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* HOME BUTTON */
+
+.home-btn {
+  width: 105px;
+
+  padding: 11px 15px;
+
+  border: 2px solid #2563eb;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #1d4ed8;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  flex-shrink: 0;
+}
+
+.home-btn:hover {
+  background: #2563eb;
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.3);
+}
+
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
+
+.student-page-title {
+  width: 92%;
+  max-width: 1200px;
+  margin: 10px auto 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 24px;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+  box-sizing: border-box;
+}
+
+.title-box h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #172033;
+}
+
+.title-box p {
+  margin: 5px 0 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.add-student-btn {
+  border: none;
+  background: linear-gradient(135deg, #ff7a00, #ff3d00);
+  color: white;
+  padding: 11px 20px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-student-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 90, 0, 0.3);
+}
+
+
+/* =====================================================
+   BRANCH CARD
+===================================================== */
+
+.branch-card {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 15px;
+  padding: 20px 25px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+  box-sizing: border-box;
+}
+
+.branch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.branch-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+}
+
+.branch-select {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 12px;
+
+  border: 1px solid #bbb;
+  border-radius: 8px;
+
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.viewing-box {
+  padding: 14px 18px;
+  background: #eef6ff;
+  border-left: 5px solid #1e90ff;
+  border-radius: 8px;
+
+  color: #333;
+  font-size: 15px;
+}
+
+.viewing-box strong {
+  color: #1e40af;
+}
+
+.viewing-box small {
+  display: inline-block;
+  margin-top: 5px;
+  color: #666;
+}
+
+
+/* =====================================================
+   ADD STUDENT FORM
+===================================================== */
+
+.student-form-card {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 20px auto;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-radius: 16px;
+
+  padding: 25px 30px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  box-sizing: border-box;
+}
+
+.student-form-title {
+  margin: 0 0 25px;
+
+  padding-bottom: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #172033;
+
+  border-bottom: 2px solid #ff7a00;
+}
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px 30px;
+
+  width: 100%;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #333;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.form-control-custom,
+.form-select-custom {
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 10px 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #c8c8c8;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #222;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-control-custom:focus,
+.form-select-custom:focus {
+  border-color: #ff7a00;
+
+  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.12);
+}
+
+.form-control-custom::placeholder {
+  color: #999;
+}
+
+
+/* =====================================================
+   FORM BUTTONS
+===================================================== */
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #eee;
+}
+
+.save-btn,
+.cancel-btn {
+  border: none;
+
+  padding: 11px 22px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.save-btn {
+  background: #198754;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #146c43;
+  transform: translateY(-1px);
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #565e64;
+}
+
+
+/* =====================================================
+   STUDENT TABLE CARD
+===================================================== */
+
+.student-table-card {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 25px auto;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.student-table-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 22px;
+
+  background: #172033;
+
+  color: white;
+}
+
+.student-table-header h5 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.student-table-header span {
+  background: #ff7a00;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.student-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.student-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 900px;
+
+  background: white;
+}
+
+.student-table thead {
+  background: #263247;
+  color: white;
+}
+
+.student-table th {
+  padding: 13px 12px;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.student-table td {
+  padding: 12px;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 13px;
+
+  color: #333;
+}
+
+.student-table tbody tr:hover {
+  background: #fff8ef;
+}
+
+.student-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.empty-row {
+  text-align: center !important;
+
+  padding: 30px !important;
+
+  color: #777 !important;
+
+  font-size: 14px !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .student-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .student-logo-box {
+    width: auto;
+  }
+
+  .school-name {
+    font-size: 25px;
+  }
+
+  .school-subtitle {
+    font-size: 13px;
+  }
+
+  .student-page-title {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .branch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-form-card {
+    padding: 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+
+  .student-table-card {
+    width: 96%;
+  }
+}
