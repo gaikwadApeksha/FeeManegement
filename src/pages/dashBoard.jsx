@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function dashBoard() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [students, setStudents] = useState([]);
   const [payments, setPayments] = useState([]);
   const [daycareStudents, setDaycareStudents] = useState([]);
@@ -14,21 +15,17 @@ function dashBoard() {
   const loadDashboardData = async () => {
     try {
       // Students
-      const studentsResponse = await fetch(
-        "http://localhost:8080/api/students/all",
-      );
+      const studentsResponse = await fetch(`${API_URL}/api/students/all`);
 
       const studentsData = await studentsResponse.json();
 
       // Payments
-      const paymentsResponse = await fetch("http://localhost:8080/payments");
+      const paymentsResponse = await fetch(`${API_URL}/payments`);
 
       const paymentsData = await paymentsResponse.json();
 
       // Daycare
-      const daycareResponse = await fetch(
-        "http://localhost:8080/api/daycare/all",
-      );
+      const daycareResponse = await fetch(`${API_URL}/api/daycare/all`);
 
       const daycareData = await daycareResponse.json();
 

@@ -288,7 +288,7 @@ function FeePayment() {
 
       await axios.post(`${API_URL}/payments`, paymentData);
 
-      const response = await axios.get("http://localhost:8080/payments");
+      const response = await axios.get(`${API_URL}/payments`);
       setPayments(response.data || []);
 
       alert("Payment saved successfully.");

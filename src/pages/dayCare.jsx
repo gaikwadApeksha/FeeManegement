@@ -271,7 +271,7 @@ export default function dayCare() {
                   value={formData.employeeId}
                   onChange={handleStudentChange}
                   placeholder="Enter Employee Id"
-                  required
+                  
                 />
               </div>
 
