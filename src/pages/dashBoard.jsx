@@ -7,8 +7,8 @@ function dashBoard() {
   const [daycareStudents, setDaycareStudents] = useState([]);
   const [loading, setLoading] = useState(true);
   const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
-  const displayName = adminUser.username || adminUser.name || "Admin";
-
+  // const displayName = adminUser.username || adminUser.name || "Admin";
+  const displayName = adminUser.name || adminUser.username || "Admin";
   // ===============================
   // LOAD DASHBOARD DATA
   // ===============================
