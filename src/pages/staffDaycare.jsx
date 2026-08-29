@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import "./staffDaycare.css";
 
 function staffStudents() {
+  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
+  const displayName = adminUser.username || adminUser.name || "Admin";
+
   const API_URL = import.meta.env.VITE_API_URL;
   // =====================================================
   // STAFF LOGIN INFORMATION
@@ -308,7 +311,7 @@ function staffStudents() {
         <div className="daycare-title-box">
           <h2 className="fw-bold mb-1">Daycare section</h2>
 
-          <p className="text-muted mb-0"> Staff</p>
+          <p className="text-muted mb-0">Hello, {displayName}!</p>
         </div>
 
         <button
@@ -409,7 +412,6 @@ function staffStudents() {
                     value={formData.employeeId}
                     onChange={handleChange}
                     placeholder="Enter employee ID"
-                    required
                   />
                 </div>
 

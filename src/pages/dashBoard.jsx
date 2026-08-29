@@ -5,8 +5,9 @@ function dashBoard() {
   const [students, setStudents] = useState([]);
   const [payments, setPayments] = useState([]);
   const [daycareStudents, setDaycareStudents] = useState([]);
-
   const [loading, setLoading] = useState(true);
+  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
+  const displayName = adminUser.username || adminUser.name || "Admin";
 
   // ===============================
   // LOAD DASHBOARD DATA
@@ -111,7 +112,7 @@ function dashBoard() {
       ========================= */}
 
       <div className="mb-4">
-        <h3 className="fw-bold">Welcome, Admin 👋</h3>
+        <h3 className="fw-bold">Welcome, {displayName} 👋</h3>
 
         <p className="text-muted">Millennium Kidss Fee Management System.</p>
       </div>

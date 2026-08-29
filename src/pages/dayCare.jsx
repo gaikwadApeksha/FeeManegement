@@ -62,7 +62,7 @@ export default function dayCare() {
   // =====================================================
   const loadPayments = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/payments`);
+      const response = await fetch(`${API_URL}/payments`);
 
       if (!response.ok) {
         throw new Error(`Server returned ${response.status}`);

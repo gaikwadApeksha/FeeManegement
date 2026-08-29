@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 function staffLogin() {
-
   const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
@@ -15,13 +14,10 @@ function staffLogin() {
     e.preventDefault();
     setError("");
     try {
-      const response = await axios.post(
-        `${API_URL}/api/users/login`,
-        {
-          username,
-          password,
-        },
-      );
+      const response = await axios.post(`${API_URL}/api/users/login`, {
+        username,
+        password,
+      });
       console.log("LOGIN RESPONSE:", response.data);
 
       if (response.data) {
@@ -34,7 +30,6 @@ function staffLogin() {
 
       setError("Invalid staff username or password");
     }
-  
   };
 
   return (
@@ -120,7 +115,7 @@ function staffLogin() {
             marginBottom: "28px",
           }}
         >
-          Staff Login
+          Center head Login
         </h3>
 
         <form onSubmit={handleLogin}>

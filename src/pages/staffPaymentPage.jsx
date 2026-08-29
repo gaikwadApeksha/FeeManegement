@@ -69,26 +69,6 @@ function staffPaymentPage() {
     loadStudents(); //changes
   }, []);
 
-  //**************load payment ******************** */
-  // const loadPayments = async () => {
-  //   try {
-  //     // const [studentResponse, daycareResponse] = await Promise.all([
-  //     //   axios.get("http://localhost:8080/api/students/all"),
-  //     //   axios.get("http://localhost:8080/api/daycare/all"),
-  //     // ]);
-  //     const response = await axios.get("http://localhost:8080/payments");
-  //     console.log("Payments from backend:", response.data);
-
-  //     setPayments(response.data || []);
-
-  //     console.log("Payments from backend");
-  //     console.log(response.data);
-
-  //     setPayments(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   const generateReceiptNo = () => {
     return (
@@ -597,17 +577,6 @@ This is a computer-generated receipt.
             Plot No 4, near Trimurti Nagar, beside Bharat Gas Office, Surve
             Nagar, Nagpur, Maharashtra <br />
             📞 8600031558{" "}
-          </p>
-        </div>
-
-        <div className="staff-info">
-          <h3>Payment Section</h3>
-          <p>
-            <strong>Staff:</strong> {staffName}
-          </p>
-          <p>
-            <strong>Branch:</strong>{" "}
-            {branchNames.join(", ") || "No branch assigned"}
           </p>
         </div>
 

@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function StaffDashboard() {
+  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
+  const displayName = adminUser.username || adminUser.name || "Admin";
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -94,7 +97,7 @@ function StaffDashboard() {
         <div className="container-fluid">
           {/* Welcome */}
           <div className="mb-4">
-            <h3 className="fw-bold">Welcome, Staff 👋</h3>
+            <h3 className="fw-bold">Welcome, {displayName} 👋</h3>
 
             <p className="text-muted">
               Manage students, payments and daycare admissions.

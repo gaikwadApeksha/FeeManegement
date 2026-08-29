@@ -5,6 +5,9 @@ import "./staffStudent.css";
 
 function StaffStudents() {
   const API_URL = import.meta.env.VITE_API_URL;
+  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
+  const displayName = adminUser.username || adminUser.name || "Admin";
+
   // =====================================================
   // STAFF LOGIN INFORMATION
   // =====================================================
@@ -265,7 +268,7 @@ function StaffStudents() {
         <div className="title-box">
           <h2 className="fw-bold mb-1">Students section</h2>
 
-          <p className="text-muted mb-0">{staffName} | Staff</p>
+          <p className="text-muted mb-0"> Hello, {displayName}!</p>
         </div>
 
         <button

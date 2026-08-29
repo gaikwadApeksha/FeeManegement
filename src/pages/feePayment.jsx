@@ -1126,6 +1126,7 @@ function FeePayment() {
                 <option>Nandanvan</option>
                 <option>Manewada</option>
                 <option>Medical</option>
+                <option>Mihan</option>
               </select>
             </div>
 
