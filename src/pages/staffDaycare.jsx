@@ -6,7 +6,7 @@ import "./staffDaycare.css";
 function staffStudents() {
   const API_URL = import.meta.env.VITE_API_URL;
   const staffUser = JSON.parse(localStorage.getItem("staffUser") || "{}");
-  const displayName = staffUser.username || staffUser.name || "Staff";
+  const displayName = staffUser.name || staffUser.username || "Staff";
 
   // =====================================================
   // STAFF LOGIN INFORMATION
