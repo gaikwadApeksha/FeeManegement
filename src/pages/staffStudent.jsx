@@ -5,14 +5,14 @@ import "./staffStudent.css";
 
 function StaffStudents() {
   const API_URL = import.meta.env.VITE_API_URL;
-  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
-  const displayName = adminUser.username || adminUser.name || "Admin";
+  const staffUser = JSON.parse(localStorage.getItem("staffUser") || "{}");
+  const displayName = staffUser.username || staffUser.name || "Staff";
 
   // =====================================================
   // STAFF LOGIN INFORMATION
   // =====================================================
 
-  const staffUser = JSON.parse(localStorage.getItem("staffUser") || "null");
+  // const staffUser = JSON.parse(localStorage.getItem("staffUser") || "null");
 
   const staffName = staffUser?.name || "";
   const staffBranches = staffUser?.branches || [];
@@ -268,7 +268,11 @@ function StaffStudents() {
         <div className="title-box">
           <h2 className="fw-bold mb-1">Students section</h2>
 
-          <p className="text-muted mb-0"> Hello, {displayName}!</p>
+          <p className="text-muted mb-0">
+            {" "}
+            Hello, {displayName} | {branchNames}
+          </p>
+          {/* <p className="text-muted mb-0">  {branchNames}</p> */}
         </div>
 
         <button

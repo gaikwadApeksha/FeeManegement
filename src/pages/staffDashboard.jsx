@@ -2,8 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function StaffDashboard() {
-  const adminUser = JSON.parse(localStorage.getItem("adminUser") || "{}");
-  const displayName = adminUser.username || adminUser.name || "Admin";
+  // const API_URL = import.meta.env.VITE_API_URL;
+  const staffUser = JSON.parse(localStorage.getItem("staffUser") || "{}");
+  const displayName = staffUser.name || staffUser.username || "Staff";
 
   const navigate = useNavigate();
 
