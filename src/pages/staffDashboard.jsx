@@ -5,7 +5,11 @@ function StaffDashboard() {
   // const API_URL = import.meta.env.VITE_API_URL;
   const staffUser = JSON.parse(localStorage.getItem("staffUser") || "{}");
   const displayName = staffUser.name || staffUser.username || "Staff";
+  const branches = staffUser.branches || [];
 
+  const branchNames = branches
+    .map((branch) => (typeof branch === "string" ? branch : branch.branchName))
+    .filter(Boolean);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -99,6 +103,13 @@ function StaffDashboard() {
           {/* Welcome */}
           <div className="mb-4">
             <h3 className="fw-bold">Welcome, {displayName} 👋</h3>
+
+            <p className="mb-2">
+              <strong>Branch:</strong>{" "}
+              {branchNames.length > 0
+                ? branchNames.join(" || ")
+                : "No branch assigned"}
+            </p>
 
             <p className="text-muted">
               Manage students, payments and daycare admissions.

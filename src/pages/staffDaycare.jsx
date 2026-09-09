@@ -16,15 +16,15 @@ function staffStudents() {
 
   // const staffName = staffUser?.name || "";
   const staffBranches = staffUser?.branches || [];
-  const branchNames = staffBranches.map((branch) => branch.branchName);
+  const branchNames = staffBranches
+    .map((branch) => (typeof branch === "string" ? branch : branch?.branchName))
+    .filter(Boolean);
 
   // =====================================================
   // STATE
   // =====================================================
 
-  const [selectedBranch, setSelectedBranch] = useState(
-    staffBranches[0]?.branchName || "",
-  );
+  const [selectedBranch, setSelectedBranch] = useState(staffBranches[0] || "");
 
   const [students, setStudents] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -32,7 +32,7 @@ function staffStudents() {
 
   const [formData, setFormData] = useState({
     studentName: "",
-    branch: staffBranches[0]?.branchName || "",
+    branch: staffBranches[0] || "",
     parentName: "",
     employeeId: "",
     mobileNo: "",
@@ -216,7 +216,7 @@ function staffStudents() {
 
       setFormData({
         studentName: "",
-        branch: "",
+        branch: selectedBranch,
         parentName: "",
         employeeId: "",
         mobileNo: "",
@@ -312,7 +312,7 @@ function staffStudents() {
           <h2 className="fw-bold mb-1">Daycare section</h2>
 
           <p className="text-muted mb-0">
-            Hello, {displayName} | {branchNames}
+            Hello, {displayName} | {branchNames.join(" || ")}
           </p>
           {/* <p className="text-muted mb-0">{branchNames}</p> */}
         </div>
@@ -599,7 +599,7 @@ function staffStudents() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="8" className="daycare-no-data">
+                    <td colSpan="9" className="daycare-no-data">
                       No students found in <strong>{selectedBranch}</strong>{" "}
                       branch.
                     </td>

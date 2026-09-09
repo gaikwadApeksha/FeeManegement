@@ -17,7 +17,9 @@ function StaffStudents() {
   const staffName = staffUser?.name || "";
   const staffBranches = staffUser?.branches || [];
 
-  const branchNames = staffBranches.map((branch) => branch.branchName);
+  const branchNames = staffBranches
+    .map((branch) => (typeof branch === "string" ? branch : branch?.branchName))
+    .filter(Boolean);
 
   // =====================================================
   // STATE
@@ -34,7 +36,7 @@ function StaffStudents() {
   const [formData, setFormData] = useState({
     studentName: "",
     className: "",
-    branch: staffBranches[0]?.branchName || "",
+    branch: staffBranches[0] || "",
     admissionDate: "",
     session: "2026-2027",
     parentName: "",
@@ -270,7 +272,7 @@ function StaffStudents() {
 
           <p className="text-muted mb-0">
             {" "}
-            Hello, {displayName} | {branchNames}
+            Hello, {displayName} | {branchNames.join(" || ")}
           </p>
           {/* <p className="text-muted mb-0">  {branchNames}</p> */}
         </div>
