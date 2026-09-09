@@ -5,12 +5,14 @@ function StaffDashboard() {
   // const API_URL = import.meta.env.VITE_API_URL;
   const staffUser = JSON.parse(localStorage.getItem("staffUser") || "{}");
   const displayName = staffUser.name || staffUser.username || "Staff";
-  const branches = staffUser.branches || [];
+  const branches = staffUser?.branches || [];
 
   const branchNames = branches
-    .map((branch) => (typeof branch === "string" ? branch : branch.branchName))
+    .map((branch) => 
+      typeof branch === "string" ? branch : branch.branchName)
     .filter(Boolean);
   const navigate = useNavigate();
+
 
   const handleLogout = () => {
     localStorage.removeItem("staffUser");

@@ -14,11 +14,13 @@ function StaffStudents() {
 
   // const staffUser = JSON.parse(localStorage.getItem("staffUser") || "null");
 
-  const staffName = staffUser?.name || "";
+  // const staffName = staffUser?.name || "";
   const staffBranches = staffUser?.branches || [];
 
   const branchNames = staffBranches
-    .map((branch) => (typeof branch === "string" ? branch : branch?.branchName))
+    .map((branch) => 
+      typeof branch === "string" ? branch : branch?.branchName
+  )
     .filter(Boolean);
 
   // =====================================================
@@ -272,7 +274,7 @@ function StaffStudents() {
 
           <p className="text-muted mb-0">
             {" "}
-            Hello, {displayName} | {branchNames.join(" || ")}
+            Hello, {displayName} | {branchNames.join(" , ")}
           </p>
           {/* <p className="text-muted mb-0">  {branchNames}</p> */}
         </div>

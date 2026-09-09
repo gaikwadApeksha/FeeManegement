@@ -15,16 +15,25 @@ function staffStudents() {
   // const staffUser = JSON.parse(localStorage.getItem("staffUser") || "null");
 
   // const staffName = staffUser?.name || "";
-  const staffBranches = staffUser?.branches || [];
+  // const staffBranches = staffUser?.branches || [];
+
+  const staffBranches = Array.isArray(staffUser?.branches)
+  ? staffUser.branches
+  : [];
+
   const branchNames = staffBranches
     .map((branch) => (typeof branch === "string" ? branch : branch?.branchName))
     .filter(Boolean);
+
 
   // =====================================================
   // STATE
   // =====================================================
 
-  const [selectedBranch, setSelectedBranch] = useState(staffBranches[0] || "");
+  // const [selectedBranch, setSelectedBranch] = useState(
+  //   staffBranches[0] || ""
+  // );
+  const [selectedBranch, setSelectedBranch] = useState(branchNames[0] || "");
 
   const [students, setStudents] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -32,7 +41,8 @@ function staffStudents() {
 
   const [formData, setFormData] = useState({
     studentName: "",
-    branch: staffBranches[0] || "",
+    // branch: staffBranches[0] || "",
+    branch: branchNames[0] || "",
     parentName: "",
     employeeId: "",
     mobileNo: "",
